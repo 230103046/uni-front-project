@@ -24,5 +24,5 @@ form.addEventListener("submit", (e) => {
         return showPopup("error", "Guests cannot exceed 100");
     }
     form.reset();
-    showPopup("success");
+    showPopup("success", "Reservation has established");
 });
