@@ -1,0 +1,33 @@
+<section>
+    <h2>Table Reservation</h2>
+
+    <form id="reservationForm" class="reservation-form">
+
+        <div class="form-row">
+            <div class="input-group">
+                <input type="text" id="name" placeholder=" " required>
+                <label for="name">Name</label>
+            </div>
+            <div class="input-group">
+                <input type="date" id="date" placeholder=" " required>
+                <label for="date"></label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-group">
+                <input type="text" id="surname" placeholder=" " required>
+                <label for="surname">Surname</label>
+            </div>
+            <div class="input-group">
+                <input type="number" min="1" max="100" id="guests" placeholder=" " required>
+                <label for="guests">Guests</label>
+            </div>
+        </div>
+
+        <button type="submit">Reserve Table</button>
+    </form>
+
+    <div id="popup-success" class="popup success">Reservation successful!</div>
+    <div id="popup-error" class="popup error">Validation error</div>
+</section>
