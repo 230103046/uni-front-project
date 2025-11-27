@@ -5,10 +5,16 @@ export function fillIn(name) {
 }
 
 async function init() {
+    await fillIn("head");
+    await fillIn("menu");
+    await fillIn("gallery");
     await fillIn("reservation");
     await fillIn("footer");
 
     import("./reservation.js");
+    import("./menu.js");
+    import("./head.js");
+    import("./gallery.js");
 }
 
 init();

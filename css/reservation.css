@@ -63,7 +63,7 @@ textarea {
     resize: none;
 }
 
-button {
+.reservation-form button {
     width: 100%;
     padding: 16px;
     font-size: 18px;
@@ -76,19 +76,19 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+.reservation-form button:hover {
     background: #ffa726;
 }
 
-/* Popups */
 .popup {
     opacity: 0;
     pointer-events: none;
     padding: 16px 20px;
     border-radius: 8px;
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
+    top: auto;
     transition: 0.3s;
     font-size: 16px;
     font-weight: bold;
