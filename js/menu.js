@@ -110,6 +110,28 @@ function renderMenu(list) {
   });
 }
 
+// function openModal(meal) {
+//   if (!meal) return;
+//   modal.style.display = "flex";
+//   modalImg.src = meal.strMealThumb || "";
+//   modalTitle.textContent = meal.strMeal || "";
+//   modalCategory.textContent = meal.strCategory || "";
+//   modalArea.textContent = meal.strArea || "";
+
+//   modalInstructions.textContent = meal.strInstructions || getShortDescription(meal);
+
+//   modalIngredients.innerHTML = "";
+//   for (let i = 1; i <= 20; i++) {
+//     const ing = meal[`strIngredient${i}`];
+//     const meas = meal[`strMeasure${i}`];
+//     if (ing && ing.trim()) {
+//       const li = document.createElement("li");
+//       li.textContent = `${ing} — ${meas || ""}`;
+//       modalIngredients.appendChild(li);
+//     }
+//   }
+// }
+
 function openModal(meal) {
   if (!meal) return;
   modal.style.display = "flex";
@@ -117,9 +139,9 @@ function openModal(meal) {
   modalTitle.textContent = meal.strMeal || "";
   modalCategory.textContent = meal.strCategory || "";
   modalArea.textContent = meal.strArea || "";
+  modalInstructions.textContent = getShortDescription(meal);
 
-  modalInstructions.textContent = meal.strInstructions || getShortDescription(meal);
-
+  // Ingredients list:
   modalIngredients.innerHTML = "";
   for (let i = 1; i <= 20; i++) {
     const ing = meal[`strIngredient${i}`];
